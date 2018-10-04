@@ -1,0 +1,21 @@
+programe un wcf el cual contenga un método que se encargue de resolver ecuaciones cuadráticas de segundo grado. Debe recibir los valores de a, b y c como parámetros y debe devolver como resultado una clase compuesta por los siguientes campos:
++ discriminante
++ primera raiz
++ segunda raiz
++ código de resultado con los siguientes valores
+	- 0:  resultado exitoso
+	- 1:  el valor de "a" es igual a cero (0).
+	- 2:  el valor del discriminante es negativo.
+
+antes de obtener los resultdos de las raíces, debe validar los siguientes elementos:
+- que "a" sea diferente de cero (0).
+- que el discriminante sea mayor o igual que cero (0).
+
+Requerimientos NO funcionales: 
+- está prohibido trabajar en forma individual.
+- el código se debe versionar en GitHub.
+- el repositorio debe incluir commits de todos los integrantes del equipo.
+- se debe seguir la organización de código propuesta en clase. 
+- el proyecto principal de la solución debe ser del tipo wcf.
+- debe incluir un proyecto de pruebas unitarias para garantizar la correctitud del método de resolución de ecuaciones. 
+- Cuando el código de resultado obtenido es distinto de cero (0) (o sea, cuando hay algún error), el valor de los campos de las dos raíces es null.
