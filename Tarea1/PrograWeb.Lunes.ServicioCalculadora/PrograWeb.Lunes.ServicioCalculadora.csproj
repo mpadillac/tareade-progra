@@ -65,6 +65,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logica\Accion\OperacionCuadratica.cs" />
     <Compile Include="Logica\Accion\OperacionPotencia.cs" />
     <Compile Include="Logica\Especificacion\OperacionPotencia.cs" />
     <Compile Include="Logica\Servicio\Service1.svc.cs">
