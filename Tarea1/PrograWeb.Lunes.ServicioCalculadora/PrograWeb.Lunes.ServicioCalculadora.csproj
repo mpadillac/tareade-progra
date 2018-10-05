@@ -71,6 +71,7 @@
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
     <Compile Include="Logica\Interfaz\IService1.cs" />
+    <Compile Include="Logica\Validacion\OperacionCuadratica.cs" />
     <Compile Include="Logica\Validacion\OperacionPotencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

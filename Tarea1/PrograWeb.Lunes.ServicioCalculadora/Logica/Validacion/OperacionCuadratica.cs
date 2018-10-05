@@ -7,6 +7,5 @@ namespace PrograWeb.Lunes.ServicioCalculadora.Logica.Validacion
 {
     public class OperacionCuadratica
     {
-
     }
 }
