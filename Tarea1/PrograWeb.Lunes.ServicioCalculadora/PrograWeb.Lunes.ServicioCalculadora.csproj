@@ -62,16 +62,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logica\Servicio\Service1.svc" />
+    <Content Include="Logica\Servicio\Service2.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logica\Accion\OperacionCuadratica.cs" />
     <Compile Include="Logica\Accion\OperacionPotencia.cs" />
+    <Compile Include="Logica\Especificacion\OperacionCuadratica.cs" />
     <Compile Include="Logica\Especificacion\OperacionPotencia.cs" />
+    <Compile Include="Logica\Interfaz\IService2.cs" />
     <Compile Include="Logica\Servicio\Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
     <Compile Include="Logica\Interfaz\IService1.cs" />
+    <Compile Include="Logica\Servicio\Service2.svc.cs">
+      <DependentUpon>Service2.svc</DependentUpon>
+    </Compile>
     <Compile Include="Logica\Validacion\OperacionCuadratica.cs" />
     <Compile Include="Logica\Validacion\OperacionPotencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

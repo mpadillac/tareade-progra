@@ -22,7 +22,7 @@ namespace PrograWeb.Lunes.ServicioCalculadora.Logica.Accion
             var laValidacion = new Logica.Validacion.OperacionCuadratica();
             double Resultado = 0.0;
             if (laValidacion.LosOperadoresSonCorrectos(a, b, c))
-                //elResultado = Math.Pow(laBase, elExponente);
+                
 
                 //Falta validar el resultado
 
