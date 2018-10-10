@@ -3,36 +3,60 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 
-namespace PrograWeb.Lunes.ServicioCalculadora.Logica.Servicio
+namespace PrograWeb.Lunes.ServicioCalculadora
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService2" en el código y en el archivo de configuración a la vez.
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
-    public interface IService2
+    public interface IOperacioncuadratica
     {
         [OperationContract]
+        string GetData(int value);
 
-        //cuadratica Cuad(double a, double b, double c);
+        [OperationContract]
+        Formula obtenerEcuacion(double variableA, double variableB, double variableC);
 
-        double Cuad(double a, double b, double c);
+        // TODO: Add your service operations here
     }
 
-    public class cuadratica
+    // Use a data contract as illustrated in the sample below to add composite types to service operations.
+    // Use a data contract as illustrated in the sample below to add composite types to service operations.
+    [DataContract]
+    public class Formula
     {
-        string praiz;
-        string sraiz;
-        string discri;
-        string codSalida;
+        private double discriminante;
+        private double primeraRaiz;
+        private double segundaRaiz;
+        private int codResultado;
 
         [DataMember]
-        public string Discri { get => discri; set => discri = value; }
-        [DataMember]
-        public string Sraiz { get => sraiz; set => sraiz = value; }
-        [DataMember]
-        public string Praiz { get => praiz; set => praiz = value; }
-        [DataMember]
-        public string CodSalida { get => codSalida; set => codSalida = value; }
+        public double Discriminante
+        {
+            get { return discriminante; }
+            set { discriminante = value; }
+        }
 
+        [DataMember]
+        public double PrimeraRaiz
+        {
+            get { return primeraRaiz; }
+            set { primeraRaiz = value; }
+        }
+
+        [DataMember]
+        public double SegundaRaiz
+        {
+            get { return segundaRaiz; }
+            set { segundaRaiz = value; }
+        }
+
+        [DataMember]
+        public int CodResultado
+        {
+            get { return codResultado; }
+            set { codResultado = value; }
+        }
     }
 }
