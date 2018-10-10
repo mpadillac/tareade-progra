@@ -7,17 +7,17 @@ namespace PrograWeb.Lunes.ServicioCalculadora.Logica.Validacion
 {
     public class OperacionCuadratica
     {
-        public bool elementoACorrecto(double variableA)
+        public bool ACorrecto(double a)
         {
             bool resultado = true;
-            resultado = !(variableA == 0);
+            resultado = !(a == 0);
             return resultado;
         }
 
-        public bool elementoADiscriminanteCorrecto(double variableA, double discriminante)
+        public bool AYDiscriminanteCorrecto(double a, double discri)
         {
             bool resultado = true;
-            resultado = !(variableA == 0 && discriminante < 0);
+            resultado = !(a == 0 && discri < 0);
             return resultado;
         }
 

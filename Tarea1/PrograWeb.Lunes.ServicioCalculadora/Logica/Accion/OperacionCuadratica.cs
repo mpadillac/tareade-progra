@@ -7,64 +7,65 @@ namespace PrograWeb.Lunes.ServicioCalculadora.Logica.Accion
 {
     public class OperacionCuadratica
     {
-        private IList<string> MiListaDeErrores = new List<string>(new string[] { });
-        public IList<string> ListaDeErrores
+        private IList<string> ListaDeErrores = new List<string>(new string[] { });
+        public IList<string> MiListaDeErrores
         {
             get
             {
-                return ListaDeErrores;
+                return MiListaDeErrores;
             }
         }
 
-        internal double calcularPrimeraRaiz(double variableA, double variableB, double discriminante)
+        internal double calcularpRaiz(double a, double b, double discri)
         {
             var validacion = new Validacion.OperacionCuadratica();
             var primeraRaiz = 0.0;
-            if (validacion.elementoADiscriminanteCorrecto(variableA, discriminante))
-                primeraRaiz = ((-1 * variableB) + Math.Sqrt(discriminante)) / (2 * variableA);
+            if (validacion.ACorrecto(a))
+                primeraRaiz = ((-1 * b) + Math.Sqrt(discri)) / (2 * a);
             else
-                ListaDeErrores.Add("La variable a debe ser diferente a cero y el discriminante mayor o igual a cero.");
+                MiListaDeErrores.Add("La constante A debe ser diferente a 0 y el discriminante mayor o igual a 0");
 
             return primeraRaiz;
         }
 
-        internal double calcularSegundaRaiz(double variableA, double variableB, double discriminante)
+        internal double calcularsRaiz(double a, double b, double discri)
         {
             var validacion = new Validacion.OperacionCuadratica();
             var segundaRaiz = 0.0;
-            if (validacion.elementoADiscriminanteCorrecto(variableA, discriminante))
-                segundaRaiz = ((-1 * variableB) - Math.Sqrt(discriminante)) / (2 * variableA);
+            if (validacion.AYDiscriminanteCorrecto(a, discri))
+                segundaRaiz = ((-1 * b) - Math.Sqrt(discri)) / (2 * a);
             else
 
-                ListaDeErrores.Add("La variable a debe ser diferente a cero y el discriminante mayor o igual a cero.");
+                MiListaDeErrores.Add("La constante A debe ser diferente a 0 y el discriminante mayor o igual a 0");
             return segundaRaiz;
         }
 
-        internal double calcularDiscriminante(double variableA, double variableB, double variableC)
+        internal double calcularDiscri(double a, double b, double c)
         {
             var validacionA = new Validacion.OperacionCuadratica();
             var resultado = 0.0;
-            if (validacionA.elementoACorrecto(variableA))
-                resultado = ((potencia(variableB)) - (4 * variableA * variableC));
-            //resultado = (Math.Pow(variableB, 2)) - (4 * variableA * variableC);
+
+            if (validacionA.ACorrecto(a))
+                resultado = ((potencia(b)) - (4 * a * c));
+            
             else
-                ListaDeErrores.Add("La variable a no puede tener como valor el 0.");
+                MiListaDeErrores.Add("La variable A no puede ser 0");
             return resultado;
         }
 
-        //Incompleto o malo
-        internal int valorResultado(double variableA, double discriminante)
+        //prueba
+        internal int Resultado(double a, double discri)
         {
             var resultado = 0;
 
-            if (variableA != 0 && discriminante > 0)
+            if (a != 0 && discri > 0)
             {
                 resultado = 0;
             }
 
-            if (variableA == 0)
+            if (a == 0)
                 resultado = 1;
-            else if (discriminante < 0)
+            else if (discri < 0)
                 resultado = 2;
 
             return resultado;

@@ -16,7 +16,7 @@ namespace PrograWeb.Lunes.ServicioCalculadora
         string GetData(int value);
 
         [OperationContract]
-        Formula obtenerEcuacion(double variableA, double variableB, double variableC);
+        Formula obtenerEcuacion(double a, double b, double c);
 
         // TODO: Add your service operations here
     }
@@ -26,37 +26,37 @@ namespace PrograWeb.Lunes.ServicioCalculadora
     [DataContract]
     public class Formula
     {
-        private double discriminante;
-        private double primeraRaiz;
-        private double segundaRaiz;
-        private int codResultado;
+        private double discri;
+        private double pRaiz;
+        private double sRaiz;
+        private int cod_Resultado;
 
         [DataMember]
-        public double Discriminante
+        public double Discri
         {
-            get { return discriminante; }
-            set { discriminante = value; }
+            get { return discri; }
+            set { discri = value; }
         }
 
         [DataMember]
         public double PrimeraRaiz
         {
-            get { return primeraRaiz; }
-            set { primeraRaiz = value; }
+            get { return pRaiz; }
+            set { pRaiz = value; }
         }
 
         [DataMember]
         public double SegundaRaiz
         {
-            get { return segundaRaiz; }
-            set { segundaRaiz = value; }
+            get { return sRaiz; }
+            set { sRaiz = value; }
         }
 
         [DataMember]
         public int CodResultado
         {
-            get { return codResultado; }
-            set { codResultado = value; }
+            get { return cod_Resultado; }
+            set { cod_Resultado = value; }
         }
     }
 }

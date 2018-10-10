@@ -11,3 +11,10 @@ C:\Users\ksandoval\Source\Repos\tareade-progra2\Tarea1\PrograWeb.Lunes.ServicioC
 C:\Users\ksandoval\Source\Repos\tareade-progra2\Tarea1\PrograWeb.Lunes.ServicioCalculadora\obj\Debug\PrograWeb.Lunes.ServicioCalculadora.csproj.CoreCompileInputs.cache
 C:\Users\ksandoval\Source\Repos\tareade-progra2\Tarea1\PrograWeb.Lunes.ServicioCalculadora\obj\Debug\PrograWeb.Lunes.ServicioCalculadora.dll
 C:\Users\ksandoval\Source\Repos\tareade-progra2\Tarea1\PrograWeb.Lunes.ServicioCalculadora\obj\Debug\PrograWeb.Lunes.ServicioCalculadora.pdb
+C:\Users\ksandoval\Source\Repos\tareade-progra4\Tarea1\PrograWeb.Lunes.ServicioCalculadora\bin\PrograWeb.Lunes.ServicioCalculadora.dll.config
+C:\Users\ksandoval\Source\Repos\tareade-progra4\Tarea1\PrograWeb.Lunes.ServicioCalculadora\bin\PrograWeb.Lunes.ServicioCalculadora.dll
+C:\Users\ksandoval\Source\Repos\tareade-progra4\Tarea1\PrograWeb.Lunes.ServicioCalculadora\bin\PrograWeb.Lunes.ServicioCalculadora.pdb
+C:\Users\ksandoval\Source\Repos\tareade-progra4\Tarea1\PrograWeb.Lunes.ServicioCalculadora\obj\Debug\PrograWeb.Lunes.ServicioCalculadora.csprojAssemblyReference.cache
+C:\Users\ksandoval\Source\Repos\tareade-progra4\Tarea1\PrograWeb.Lunes.ServicioCalculadora\obj\Debug\PrograWeb.Lunes.ServicioCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\ksandoval\Source\Repos\tareade-progra4\Tarea1\PrograWeb.Lunes.ServicioCalculadora\obj\Debug\PrograWeb.Lunes.ServicioCalculadora.dll
+C:\Users\ksandoval\Source\Repos\tareade-progra4\Tarea1\PrograWeb.Lunes.ServicioCalculadora\obj\Debug\PrograWeb.Lunes.ServicioCalculadora.pdb

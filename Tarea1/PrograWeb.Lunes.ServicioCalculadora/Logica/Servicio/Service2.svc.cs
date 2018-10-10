@@ -12,37 +12,37 @@ namespace PrograWeb.Lunes.ServicioCalculadora.Logica.Servicio
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service2.svc o Service2.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Service2 : IOperacioncuadratica
     {
-        
+
 
         //<summary>
         /// Función para resolver la ecuación cuadratica por medio de la fórmula general
         /// </summary>
-        /// <param name="variableA">de la fórmula ax^2 + bx + c</param>
-        /// <param name="variableB">de la fórmula ax^2 + bx + c</param>
-        /// <param name="variableC">de la fórmula ax^2 + bx + c</param>
+        /// <param name="constante A">de la ecuación cuadrática/param>
+        /// <param name="constante B">de la ecuación cuadrática</param>
+        /// <param name="constante C">de la ecuación cuadrática</param>
         /// <returns>El valor de la fórmula general</returns>
-        public Formula obtenerEcuacion(double variableA, double variableB, double variableC)
+        public Formula obtenerEcuacion(double a, double b, double c)
         {
-            var composicionFG = new Formula ();
+            var compformula = new Formula ();
             Logica.Especificacion.OperacionCuadratica laEspecificacion;
             laEspecificacion = new Logica.Especificacion.OperacionCuadratica();
-            var discri = laEspecificacion.Discriminante(variableA, variableB, variableC);
+            var discri = laEspecificacion.Discriminante(a, b, c);
 
-            composicionFG.CodResultado = laEspecificacion.valorResultado(variableA, composicionFG.Discriminante);
-            if (composicionFG.CodResultado == 0)
+            compformula.CodResultado = laEspecificacion.valorResultado(a, compformula.Discri);
+            if (compformula.CodResultado == 0)
             {
-                composicionFG.Discriminante = discri;
-                composicionFG.PrimeraRaiz = laEspecificacion.primeraRaiz(variableA, variableB, discri);
-                composicionFG.SegundaRaiz = laEspecificacion.segundaRaiz(variableA, variableB, composicionFG.Discriminante);
+                compformula.Discri = discri;
+                compformula.PrimeraRaiz = laEspecificacion.pRaiz(a, b, discri);
+                compformula.SegundaRaiz = laEspecificacion.sRaiz(a, b, compformula.Discri);
 
             }
             else
             {
-                composicionFG.PrimeraRaiz = 0;
-                composicionFG.SegundaRaiz = 0;
+                compformula.PrimeraRaiz = 0;
+                compformula.SegundaRaiz = 0;
             }
 
-            return composicionFG;
+            return compformula;
         }
 
 

@@ -10,54 +10,54 @@ namespace PrograWeb.Lunes.ServicioCalculadora.Logica.Especificacion
         //<summary>
         /// Función para obtener el valor del discriminante
         /// </summary>
-        /// <param name="variableA">de la fórmula ax^2 + bx + c</param>
-        /// <param name="variableB">de la fórmula ax^2 + bx + c</param>
-        /// <param name="variableC">de la fórmula ax^2 + bx + c</param>
+        /// <param name="constante A">de la ecuación cuadrática</param>
+        /// <param name="constante B">de la ecuación cuadrática/param>
+        /// <param name="constante C">de la ecuación cuadrática</param>
         /// <returns>El valor del discriminante</returns>
-        public double Discriminante(double variableA, double variableB, double variableC)
+        public double Discriminante(double a, double b, double c)
         {
             var accionDiscriminante = new Accion.OperacionCuadratica();
-            var resultado = accionDiscriminante.calcularDiscriminante(variableA, variableB, variableC);
+            var resultado = accionDiscriminante.calcularDiscri(a, b, c);
             return resultado;
         }
 
         ///<summary>
         /// Función para obtener el valor de la primera raíz 
         /// </summary>
-        /// <param name="variableA">de la fórmula genelal</param>
-        /// <param name="variableB">de la fórmula general</param>
-        /// <param name="discriminante">de la fórmula general</param>
+        /// <param name="constante A">de la fórmula</param>
+        /// <param name="constante B">de la fórmula</param>
+        /// <param name="discriminante">de la fórmula</param>
         /// <returns>El valor de la primera raíz</returns>
-        public double primeraRaiz(double variableA, double variableB, double discriminante)
+        public double pRaiz(double a, double b, double discri)
         {
             var accionPrimeraRaiz = new Accion.OperacionCuadratica();
-            var resultado = accionPrimeraRaiz.calcularPrimeraRaiz(variableA, variableB, discriminante);
+            var resultado = accionPrimeraRaiz.calcularpRaiz(a, b, discri);
             return resultado;
         }
 
         ///<summary>
         /// Función para obtener el valor de la segunda raíz 
         /// </summary>
-        /// <param name="variableA">de la fórmula genelal</param>
-        /// <param name="variableB">de la fórmula general</param>
-        /// <param name="discriminante">de la fórmula general</param>
+        /// <param name="constante A">de la fórmula</param>
+        /// <param name="constante B">de la fórmula</param>
+        /// <param name="discriminante">de la fórmula</param>
         /// <returns>El valor de la segunda raíz</returns>
-        public double segundaRaiz(double variableA, double variableB, double discriminante)
+        public double sRaiz(double a, double b, double discri)
         {
             var accionSegundaRaiz = new Accion.OperacionCuadratica();
-            var resultado = accionSegundaRaiz.calcularSegundaRaiz(variableA, variableB, discriminante);
+            var resultado = accionSegundaRaiz.calcularsRaiz(a, b, discri);
             return resultado;
         }
         ///<summary>
         /// Función para obtener el valor del resultado
         /// </summary>
-        /// <param name="variableA">de la fórmula genelal</param>
+        /// <param name="constante A">de la fórmula genelal</param>
         /// <param name="discriminante">de la fórmula general</param>
-        /// <returns>El valor de según el resultado</returns>
-        public int valorResultado(double variableA, double discriminante)
+        /// <returns>El valor según el resultado</returns>
+        public int valorResultado(double a, double discri)
         {
             var accionValorResultado = new Accion.OperacionCuadratica();
-            var resultado = accionValorResultado.valorResultado(variableA, discriminante);
+            var resultado = accionValorResultado.Resultado(a, discri);
             return resultado;
         }
     }
