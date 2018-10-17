@@ -42,7 +42,7 @@ namespace PrograWeb.Lunes.CalculadoraTest
             Assert.AreEqual(result, resultR);
         }
         [TestMethod]
-        public void variableADiferenteCeroDiscriminanteIgualCero()
+        public void constanteADiferenteCeroDiscriminanteIgualCero()
         {
             // preparación del escenario
             var consA = 36;
